@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="StudentRealm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên trường" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4w-Ew-xZY">
+                        <rect key="frame" x="106" y="10" width="206" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="1yp-ZG-tll"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_cupon" translatesAutoresizingMaskIntoConstraints="NO" id="AxM-Qf-GIO">
+                        <rect key="frame" x="8" y="10" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="Awi-Jp-DPJ"/>
+                            <constraint firstAttribute="height" constant="90" id="ezY-lJ-29Q"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sỉ số" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-Zq-3kY">
+                        <rect key="frame" x="106" y="79" width="206" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="mPu-Ju-KPM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên lớp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-qm-jxr">
+                        <rect key="frame" x="106" y="44" width="206" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="h0c-uW-3tl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1zE-qm-jxr" firstAttribute="leading" secondItem="AxM-Qf-GIO" secondAttribute="trailing" constant="8" id="1Cj-iF-lD8"/>
+                    <constraint firstItem="K4w-Ew-xZY" firstAttribute="leading" secondItem="AxM-Qf-GIO" secondAttribute="trailing" constant="8" id="Ffn-kh-usy"/>
+                    <constraint firstItem="NbU-Zq-3kY" firstAttribute="leading" secondItem="AxM-Qf-GIO" secondAttribute="trailing" constant="8" id="I8R-qp-0dR"/>
+                    <constraint firstItem="AxM-Qf-GIO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Kzm-IG-eiE"/>
+                    <constraint firstItem="1zE-qm-jxr" firstAttribute="top" secondItem="K4w-Ew-xZY" secondAttribute="bottom" constant="13" id="NB0-ib-hu0"/>
+                    <constraint firstItem="AxM-Qf-GIO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="WVs-WA-5Wx"/>
+                    <constraint firstAttribute="trailing" secondItem="NbU-Zq-3kY" secondAttribute="trailing" constant="8" id="Wpc-ib-QWk"/>
+                    <constraint firstAttribute="trailing" secondItem="K4w-Ew-xZY" secondAttribute="trailing" constant="8" id="e6j-mz-Sfw"/>
+                    <constraint firstItem="NbU-Zq-3kY" firstAttribute="top" secondItem="1zE-qm-jxr" secondAttribute="bottom" constant="14" id="edJ-tD-WaD"/>
+                    <constraint firstAttribute="trailing" secondItem="1zE-qm-jxr" secondAttribute="trailing" constant="8" id="lUs-DP-58F"/>
+                    <constraint firstItem="K4w-Ew-xZY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qWJ-Gt-Sbd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="AxM-Qf-GIO" id="o0Q-J0-FiI"/>
+                <outlet property="classNameLabel" destination="1zE-qm-jxr" id="u7W-sj-DgD"/>
+                <outlet property="noNumberLabel" destination="NbU-Zq-3kY" id="a1f-3i-OW1"/>
+                <outlet property="schoolNameLabel" destination="K4w-Ew-xZY" id="biv-l9-MJj"/>
+            </connections>
+            <point key="canvasLocation" x="299" y="473"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_cupon" width="165" height="115"/>
+    </resources>
+</document>

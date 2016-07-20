@@ -17,4 +17,13 @@ class StudentViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func backButton(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func addStudentButton(sender: AnyObject) {
+        let addStudentVC = AddStudentViewController()
+        navigationController?.pushViewController(addStudentVC, animated: true)
+    }
 }
