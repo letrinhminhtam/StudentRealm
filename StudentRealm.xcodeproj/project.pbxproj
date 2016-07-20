@@ -27,6 +27,7 @@
 		8F35549A1D3E346A00971FB0 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3554981D3E346A00971FB0 /* StudentViewController.swift */; };
 		8F35549B1D3E346A00971FB0 /* StudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3554991D3E346A00971FB0 /* StudentViewController.xib */; };
 		8F35549D1D3E371C00971FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35549C1D3E371C00971FB0 /* AppDelegate.swift */; };
+		8FB44E011D3F671C00803B47 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB44E001D3F671C00803B47 /* FileManager.swift */; };
 		AE0D74BCE6D327881CCDB3D7 /* Pods_StudentRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFBA6A28D03E1ABC18674BD /* Pods_StudentRealm.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		8F3554981D3E346A00971FB0 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		8F3554991D3E346A00971FB0 /* StudentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentViewController.xib; sourceTree = "<group>"; };
 		8F35549C1D3E371C00971FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FB44E001D3F671C00803B47 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		8F3554411D3E2EE300971FB0 /* StudentRealm */ = {
 			isa = PBXGroup;
 			children = (
+				8FB44DFB1D3F66BF00803B47 /* Base */,
 				8F3554771D3E2FDA00971FB0 /* Model */,
 				8F3554701D3E2F8F00971FB0 /* AppDelegate */,
 				8F3554731D3E2F8F00971FB0 /* Define */,
@@ -282,6 +285,14 @@
 				8F3554991D3E346A00971FB0 /* StudentViewController.xib */,
 			);
 			path = Student;
+			sourceTree = "<group>";
+		};
+		8FB44DFB1D3F66BF00803B47 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8FB44E001D3F671C00803B47 /* FileManager.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		B5F461B6BD5DBC30A21171C5 /* Frameworks */ = {
@@ -486,6 +497,7 @@
 				07004FD81D3F42FB0075F38A /* Class.swift in Sources */,
 				8F35548C1D3E340500971FB0 /* EditStudentViewController.swift in Sources */,
 				8F3554841D3E315B00971FB0 /* HomeViewController.swift in Sources */,
+				8FB44E011D3F671C00803B47 /* FileManager.swift in Sources */,
 				8F3554941D3E343100971FB0 /* AddClassStudentViewContrller.swift in Sources */,
 				07004FD51D3F42C50075F38A /* HomeTableViewCell.swift in Sources */,
 				07004FD01D3F41980075F38A /* Strings.swift in Sources */,

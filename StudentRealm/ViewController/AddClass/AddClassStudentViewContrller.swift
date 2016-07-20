@@ -37,13 +37,18 @@ class AddClassStudentViewContrller: UIViewController {
     //MARK: set Up UI
     private func setUpUI() {
         imagePicker.delegate = self
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(loadImageButton()))
-        self.view.addGestureRecognizer(gestureRecognizer)
+        clickOpenCameraroll()
     }
     
     //MARK: set Up Data
     private func setUpData() {
         
+    }
+    
+    private func clickOpenCameraroll() {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loadImageButton(_:)))
+        self.avatarImageView.addGestureRecognizer(gestureRecognizer)
+        self.avatarImageView.userInteractionEnabled = true
     }
 
     @IBAction func backHomeViewVCButton(sender: AnyObject) {
@@ -52,15 +57,16 @@ class AddClassStudentViewContrller: UIViewController {
     
     @IBAction func doneButton(sender: AnyObject) {
         addClassStudent()
-        navigationController?.popViewControllerAnimated(true)
     }
     
     private func addClassStudent() {
         classStudent.schoolName = tfSchoolName.text!
         classStudent.classRoom = tfClassName.text!
         classStudent.numbers = tfNoNumber.text!
-        avatarImageView.image = UIImage(named: classStudent.avatarImageView)
-        print("du lieu: \(classStudent.classRoom)")
+        if let imageView = avatarImageView.image {
+            classStudent.avatarImageView = saveImageView(imageView)
+        }
+        print("image add: \(classStudent.avatarImageView)")
         do {
             let realm = try Realm()
             try realm.write {
@@ -69,11 +75,22 @@ class AddClassStudentViewContrller: UIViewController {
         } catch {
             print("Catch")
         }
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    private func saveImageView(imageView: UIImage) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy hh.mm.ss"
+        let filename = "\(dateFormatter.stringFromDate(NSDate())).png"
+        FileManager.fileManager.saveFile(imageView, name: filename, typeDirectory: .DocumentDirectory)
+        print("Link: \(filename)")
+        return filename
     }
 }
 
 extension AddClassStudentViewContrller: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func loadImageButton() {
+
+    func loadImageButton(sender: AnyObject) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)

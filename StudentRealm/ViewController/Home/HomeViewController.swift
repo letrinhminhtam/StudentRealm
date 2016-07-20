@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
 
     }
     
-    //MARK: IBActionButton
+    //MARK: IBAction Button
     @IBAction func addClassButton(sender: AnyObject) {
         let addClass = AddClassStudentViewContrller()
         navigationController?.pushViewController(addClass, animated: true)

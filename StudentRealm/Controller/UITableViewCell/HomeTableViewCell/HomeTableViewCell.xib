@@ -23,7 +23,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_cupon.png" translatesAutoresizingMaskIntoConstraints="NO" id="AxM-Qf-GIO">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_cupon" translatesAutoresizingMaskIntoConstraints="NO" id="AxM-Qf-GIO">
                         <rect key="frame" x="8" y="10" width="90" height="90"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="90" id="Awi-Jp-DPJ"/>
@@ -64,6 +64,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="avatarImageView" destination="AxM-Qf-GIO" id="o0Q-J0-FiI"/>
                 <outlet property="classNameLabel" destination="1zE-qm-jxr" id="u7W-sj-DgD"/>
                 <outlet property="noNumberLabel" destination="NbU-Zq-3kY" id="a1f-3i-OW1"/>
                 <outlet property="schoolNameLabel" destination="K4w-Ew-xZY" id="biv-l9-MJj"/>
@@ -72,6 +73,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="img_cupon.png" width="165" height="115"/>
+        <image name="img_cupon" width="165" height="115"/>
     </resources>
 </document>

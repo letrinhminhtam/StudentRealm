@@ -13,6 +13,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak private var schoolNameLabel: UILabel!
     @IBOutlet weak private var classNameLabel: UILabel!
     @IBOutlet weak private var noNumberLabel: UILabel!
+    @IBOutlet weak private var avatarImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +30,10 @@ class HomeTableViewCell: UITableViewCell {
         schoolNameLabel.text = NSString(format: "\(Strings.schoolName)%@", classStudent.schoolName) as String
         classNameLabel.text = NSString(format: "\(Strings.className)%@", classStudent.classRoom) as String
         noNumberLabel.text = NSString(format: "\(Strings.noNumber)%@", classStudent.numbers) as String
+        if !classStudent.avatarImageView.isEmpty {
+            avatarImageView.image = FileManager.fileManager.loadFile(classStudent.avatarImageView, typeDirectory: .DocumentDirectory)
+            print("Image: \(classStudent.avatarImageView)")
+        }
     }
     
     func setUpUI() {
