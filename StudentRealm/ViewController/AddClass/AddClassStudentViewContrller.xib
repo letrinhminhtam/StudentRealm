@@ -7,6 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddClassStudentViewContrller" customModule="StudentRealm" customModuleProvider="target">
             <connections>
+                <outlet property="avatarImageView" destination="joZ-5v-5uV" id="gJO-F1-fUs"/>
+                <outlet property="tfClassName" destination="Cbb-0I-2Ez" id="Uka-y2-YbE"/>
+                <outlet property="tfNoNumber" destination="7e2-NH-g4c" id="E8s-Cn-Fo3"/>
+                <outlet property="tfSchoolName" destination="Heo-gF-hjI" id="7Gs-gR-CyT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -62,7 +66,7 @@
                         <constraint firstItem="Jxb-YU-BPC" firstAttribute="centerY" secondItem="nqk-Gh-ej6" secondAttribute="centerY" constant="10" id="q2q-Zl-WmO"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_cupon.png" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-5v-5uV">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_cupon" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-5v-5uV">
                     <rect key="frame" x="82" y="113" width="240" height="160"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="160" id="amt-Kc-4ml"/>
@@ -104,8 +108,8 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên lớp:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYA-Ua-doJ">
-                    <rect key="frame" x="44" y="364" width="61" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sỉ số:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYA-Ua-doJ">
+                    <rect key="frame" x="44" y="364" width="42" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="hmY-LW-VPn"/>
                     </constraints>
@@ -134,7 +138,7 @@
                 <constraint firstItem="7e2-NH-g4c" firstAttribute="top" secondItem="Cbb-0I-2Ez" secondAttribute="bottom" constant="8" id="Auh-6N-8YS"/>
                 <constraint firstItem="zwr-Yn-TxG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="Hgz-FQ-F6O"/>
                 <constraint firstItem="bYA-Ua-doJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="IoV-lB-t5s"/>
-                <constraint firstItem="7e2-NH-g4c" firstAttribute="leading" secondItem="bYA-Ua-doJ" secondAttribute="trailing" constant="36" id="KEh-1m-nvs"/>
+                <constraint firstItem="7e2-NH-g4c" firstAttribute="leading" secondItem="bYA-Ua-doJ" secondAttribute="trailing" constant="55" id="KEh-1m-nvs"/>
                 <constraint firstItem="oYf-rQ-u6d" firstAttribute="top" secondItem="joZ-5v-5uV" secondAttribute="bottom" constant="15" id="KY3-zS-1ns"/>
                 <constraint firstItem="zwr-Yn-TxG" firstAttribute="top" secondItem="oYf-rQ-u6d" secondAttribute="bottom" constant="8" id="Mbo-pL-rAx"/>
                 <constraint firstItem="joZ-5v-5uV" firstAttribute="top" secondItem="nqk-Gh-ej6" secondAttribute="bottom" constant="49" id="TeX-ps-ndH"/>
@@ -152,6 +156,6 @@
         </view>
     </objects>
     <resources>
-        <image name="img_cupon.png" width="165" height="115"/>
+        <image name="img_cupon" width="165" height="115"/>
     </resources>
 </document>

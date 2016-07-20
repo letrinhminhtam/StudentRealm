@@ -10,4 +10,7 @@ import UIKit
 
 class Strings {
     static let home = "Home"
+    static let schoolName = "Tên trường: "
+    static let className = "Tên lớp: "
+    static let noNumber = "Sĩ số: "
 }

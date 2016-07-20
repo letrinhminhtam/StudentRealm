@@ -63,6 +63,11 @@
                     <constraint firstItem="K4w-Ew-xZY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qWJ-Gt-Sbd"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="classNameLabel" destination="1zE-qm-jxr" id="u7W-sj-DgD"/>
+                <outlet property="noNumberLabel" destination="NbU-Zq-3kY" id="a1f-3i-OW1"/>
+                <outlet property="schoolNameLabel" destination="K4w-Ew-xZY" id="biv-l9-MJj"/>
+            </connections>
             <point key="canvasLocation" x="299" y="473"/>
         </tableViewCell>
     </objects>

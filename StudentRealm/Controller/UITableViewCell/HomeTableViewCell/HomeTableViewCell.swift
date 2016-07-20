@@ -9,6 +9,10 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak private var schoolNameLabel: UILabel!
+    @IBOutlet weak private var classNameLabel: UILabel!
+    @IBOutlet weak private var noNumberLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,8 +25,10 @@ class HomeTableViewCell: UITableViewCell {
         selectionStyle = .None
     }
     
-    func configureCell() {
-        
+    func configureCell(classStudent: Class) {
+        schoolNameLabel.text = NSString(format: "\(Strings.schoolName)%@", classStudent.schoolName) as String
+        classNameLabel.text = NSString(format: "\(Strings.className)%@", classStudent.classRoom) as String
+        noNumberLabel.text = NSString(format: "\(Strings.noNumber)%@", classStudent.numbers) as String
     }
     
     func setUpUI() {

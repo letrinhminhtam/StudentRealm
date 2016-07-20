@@ -7,7 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
+import Realm
 
-class Student: NSObject {
-
+class Student: Object {
+   dynamic var studentName = ""
+   dynamic var age = ""
+   dynamic var sex = ""
+   dynamic var classRoom = ""
 }
