@@ -32,15 +32,15 @@ class HomeTableViewCell: UITableViewCell {
         noNumberLabel.text = NSString(format: "\(Strings.noNumber)%@", classStudent.numbers) as String
         if !classStudent.avatarImageView.isEmpty {
             avatarImageView.image = FileManager.fileManager.loadFile(classStudent.avatarImageView, typeDirectory: .DocumentDirectory)
-            print("Image: \(classStudent.avatarImageView)")
         }
     }
     
-    func setUpUI() {
+    //MARK: private
+    private func setUpUI() {
         
     }
     
-    func setUpData() {
+    private func setUpData() {
         
     }
 }

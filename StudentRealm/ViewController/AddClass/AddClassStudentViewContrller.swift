@@ -30,6 +30,7 @@ class AddClassStudentViewContrller: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: Private
     private func configureAddClassStudentVC() {
         
     }
