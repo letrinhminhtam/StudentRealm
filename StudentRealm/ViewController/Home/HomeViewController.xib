@@ -5,8 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomViewController" customModule="StudentRealm" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="StudentRealm" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="mu7-Or-69h" id="odL-ra-EE3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,6 +36,9 @@
                                 <constraint firstAttribute="height" constant="30" id="jAf-lP-YsE"/>
                             </constraints>
                             <state key="normal" title="Add"/>
+                            <connections>
+                                <action selector="addClassButton:" destination="-1" eventType="touchUpInside" id="wL7-2E-WCv"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
