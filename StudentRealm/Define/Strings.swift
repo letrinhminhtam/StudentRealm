@@ -13,4 +13,8 @@ class Strings {
     static let schoolName = "Tên trường: "
     static let className = "Tên lớp: "
     static let noNumber = "Sĩ số: "
+    static let lastName = "Họ tên: "
+    static let age = "Tuổi: "
+    static let sex = "Giới tính: "
+    static let classRoom = "Lớp học: "
 }

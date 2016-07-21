@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StudentViewController" customModule="StudentRealm" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="F1X-E3-xEb" id="btd-dz-beb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -62,36 +63,20 @@
                         <constraint firstItem="51Z-xj-nsZ" firstAttribute="centerY" secondItem="H8Q-QU-vB6" secondAttribute="centerY" constant="8.5" id="s0b-Zu-stc"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gld-RI-EhV">
-                    <rect key="frame" x="130" y="131" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgh-di-ZIx">
-                    <rect key="frame" x="152" y="273" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtZ-ZM-xMj">
-                    <rect key="frame" x="144" y="198" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0i-TH-gZT">
-                    <rect key="frame" x="130" y="169" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F1X-E3-xEb">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="H8Q-QU-vB6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="105-vH-hen"/>
                 <constraint firstAttribute="trailing" secondItem="H8Q-QU-vB6" secondAttribute="trailing" id="1Gr-1n-DUn"/>
+                <constraint firstItem="F1X-E3-xEb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MFY-5K-ij0"/>
+                <constraint firstItem="F1X-E3-xEb" firstAttribute="top" secondItem="H8Q-QU-vB6" secondAttribute="bottom" id="N2f-vw-OWC"/>
+                <constraint firstAttribute="trailing" secondItem="F1X-E3-xEb" secondAttribute="trailing" id="NaL-f1-Gje"/>
                 <constraint firstItem="H8Q-QU-vB6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SRf-qu-cXJ"/>
+                <constraint firstAttribute="bottom" secondItem="F1X-E3-xEb" secondAttribute="bottom" id="nHj-Tt-V6R"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="316.5" y="338.5"/>

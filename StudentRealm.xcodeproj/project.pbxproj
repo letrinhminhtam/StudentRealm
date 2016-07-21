@@ -12,6 +12,8 @@
 		07004FD61D3F42C50075F38A /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07004FD41D3F42C50075F38A /* HomeTableViewCell.xib */; };
 		07004FD81D3F42FB0075F38A /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07004FD71D3F42FB0075F38A /* Class.swift */; };
 		07004FDA1D3F430A0075F38A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07004FD91D3F430A0075F38A /* Student.swift */; };
+		076D8B631D414C3000EE9202 /* StudentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D8B611D414C3000EE9202 /* StudentListTableViewCell.swift */; };
+		076D8B641D414C3000EE9202 /* StudentListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076D8B621D414C3000EE9202 /* StudentListTableViewCell.xib */; };
 		8F35544A1D3E2EE600971FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3554491D3E2EE600971FB0 /* Assets.xcassets */; };
 		8F35544D1D3E2EE600971FB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F35544B1D3E2EE600971FB0 /* LaunchScreen.storyboard */; };
 		8F3554581D3E2EEA00971FB0 /* StudentRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3554571D3E2EEA00971FB0 /* StudentRealmTests.swift */; };
@@ -54,6 +56,8 @@
 		07004FD41D3F42C50075F38A /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		07004FD71D3F42FB0075F38A /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		07004FD91D3F430A0075F38A /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		076D8B611D414C3000EE9202 /* StudentListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListTableViewCell.swift; sourceTree = "<group>"; };
+		076D8B621D414C3000EE9202 /* StudentListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentListTableViewCell.xib; sourceTree = "<group>"; };
 		3DFBA6A28D03E1ABC18674BD /* Pods_StudentRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B86A43813F00BFCA998357 /* Pods-StudentRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentRealm/Pods-StudentRealm.release.xcconfig"; sourceTree = "<group>"; };
 		7EBBAB53AFE89D15B0F5C3FD /* Pods-StudentRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudentRealm/Pods-StudentRealm.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		07004FD11D3F42960075F38A /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				076D8B601D414C0900EE9202 /* StudentListTableViewCell */,
 				07004FD21D3F42AA0075F38A /* HomeTableViewCell */,
 			);
 			path = UITableViewCell;
@@ -122,6 +127,15 @@
 				07004FD41D3F42C50075F38A /* HomeTableViewCell.xib */,
 			);
 			path = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		076D8B601D414C0900EE9202 /* StudentListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				076D8B611D414C3000EE9202 /* StudentListTableViewCell.swift */,
+				076D8B621D414C3000EE9202 /* StudentListTableViewCell.xib */,
+			);
+			path = StudentListTableViewCell;
 			sourceTree = "<group>";
 		};
 		679F27825264226834E47220 /* Pods */ = {
@@ -416,6 +430,7 @@
 				8F3554911D3E341C00971FB0 /* AddStudentViewController.xib in Resources */,
 				8F35548D1D3E340500971FB0 /* EditStudentViewController.xib in Resources */,
 				8F35549B1D3E346A00971FB0 /* StudentViewController.xib in Resources */,
+				076D8B641D414C3000EE9202 /* StudentListTableViewCell.xib in Resources */,
 				8F3554951D3E343100971FB0 /* AddClassStudentViewContrller.xib in Resources */,
 				8F3554851D3E315B00971FB0 /* HomeViewController.xib in Resources */,
 			);
@@ -493,6 +508,7 @@
 				8F35549D1D3E371C00971FB0 /* AppDelegate.swift in Sources */,
 				8F35549A1D3E346A00971FB0 /* StudentViewController.swift in Sources */,
 				8F3554901D3E341C00971FB0 /* AddStudentViewController.swift in Sources */,
+				076D8B631D414C3000EE9202 /* StudentListTableViewCell.swift in Sources */,
 				07004FDA1D3F430A0075F38A /* Student.swift in Sources */,
 				07004FD81D3F42FB0075F38A /* Class.swift in Sources */,
 				8F35548C1D3E340500971FB0 /* EditStudentViewController.swift in Sources */,
