@@ -12,9 +12,11 @@ import RealmSwift
 class StudentViewController: UIViewController {
 
     @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var nameLabel: UILabel!
     
     var student: Results<Student>?
     var classs = Class()
+    var studi = Student()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +53,7 @@ class StudentViewController: UIViewController {
     //MARK: Set Up Data
     private func setUpData() {
         studentList()
+        nameLabel.text = classs.schoolName
     }
     
     //MARK: Set Up UI

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EditStudentViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class EditStudentViewController: UIViewController {
     @IBOutlet weak private var imageView: UIImageView!
 
     var classStudent = Class()
+    var students = Student()
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,9 @@ class EditStudentViewController: UIViewController {
     
     @IBAction func studentButton(sender: AnyObject) {
         let studentVC = StudentViewController()
+        studentVC.classs.schoolName = classStudent.schoolName
+        
+        print("Name: \(students.studentName)")
         navigationController?.pushViewController(studentVC, animated:true)
     }
     
