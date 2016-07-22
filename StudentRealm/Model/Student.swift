@@ -11,8 +11,9 @@ import RealmSwift
 import Realm
 
 class Student: Object {
-   dynamic var studentName = ""
-   dynamic var age = ""
-   dynamic var sex = ""
-   dynamic var classRoom = ""
+    dynamic var studentName = ""
+    dynamic var age = ""
+    dynamic var sex = ""
+    dynamic var classRoom = ""
+    dynamic var isCompleted = false
 }

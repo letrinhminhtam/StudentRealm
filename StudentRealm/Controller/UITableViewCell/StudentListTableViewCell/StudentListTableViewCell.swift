@@ -13,7 +13,7 @@ class StudentListTableViewCell: UITableViewCell {
     @IBOutlet weak private var lastNameLabel: UILabel!
     @IBOutlet weak private var ageLabel: UILabel!
     @IBOutlet weak private var sexLabel: UILabel!
-    @IBOutlet weak private var classLabel: UILabel!
+    @IBOutlet weak var classLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,8 +28,7 @@ class StudentListTableViewCell: UITableViewCell {
         lastNameLabel.text = NSString(format: "\(Strings.lastName)%@", student.studentName) as String
         ageLabel.text = NSString(format: "\(Strings.age)%@", student.age) as String
         sexLabel.text = NSString(format: "\(Strings.sex)%@", student.sex) as String
-        classLabel.text = NSString(format: "\(Strings.classRoom)%@", student.classRoom) as String
-        print("\(student.classRoom)")
+       // classLabel.text = NSString(format: "\(Strings.classRoom)%@", student.classRoom) as String
     }
 }
 	

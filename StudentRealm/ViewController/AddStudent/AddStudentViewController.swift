@@ -16,10 +16,14 @@ class AddStudentViewController: UIViewController {
     @IBOutlet weak private var tfSex: UITextField!
     @IBOutlet weak private var tfClass: UITextField!
 
-    var student = Student()
+    var students = Student()
+    var classs = Class()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureAddStudentViewController()
+        setUpUI()
+        setUpData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,19 +51,20 @@ class AddStudentViewController: UIViewController {
     
     //MARK: Set Up Data
     private func setUpData() {
-        
+       tfClass.text = classs.classRoom
+        print(tfClass.text)
     }
     
     private func addStudent() {
-        student.studentName = tfLastName.text!
-        student.age = tfAge.text!
-        student.sex = tfSex.text!
-        student.classRoom = tfClass.text!
-        print("Student: \(student.studentName)")
+        students.studentName = tfLastName.text!
+        students.age = tfAge.text!
+        students.sex = tfSex.text!
+        students.classRoom = classs.classRoom
+        print("Student: \(students.studentName)")
         do {
             let realm = try Realm()
             try realm.write {
-                realm.add(student)
+                realm.add(students)
             }
         } catch {}
         navigationController?.popViewControllerAnimated(true)

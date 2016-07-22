@@ -11,14 +11,14 @@ import RealmSwift
 
 class EditStudentViewController: UIViewController {
     
-    @IBOutlet weak private var schoolNameLabel: UILabel!
-    @IBOutlet weak private var classNameLabel: UILabel!
-    @IBOutlet weak private var noNumberLabel: UILabel!
+    @IBOutlet weak private var tfSchoolName: UITextField!
+    @IBOutlet weak private var tfClassName: UITextField!
+    @IBOutlet weak private var tfNoNumber: UITextField!
     @IBOutlet weak private var imageView: UIImageView!
 
     var classStudent = Class()
     var students = Student()
-    let realm = try! Realm()
+    var results: Results<Class>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +38,21 @@ class EditStudentViewController: UIViewController {
     
     @IBAction func studentButton(sender: AnyObject) {
         let studentVC = StudentViewController()
-        studentVC.classs.schoolName = classStudent.schoolName
-        
-        print("Name: \(students.studentName)")
+        studentVC.classs = classStudent
         navigationController?.pushViewController(studentVC, animated:true)
     }
     
     @IBAction func deleteStudentButton(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+        do {
+            let realm = try Realm()
+            try realm.write ({ () -> Void in
+                if !self.classStudent.avatarImageView.isEmpty {
+                    FileManager.fileManager.deleteFile(self.classStudent.avatarImageView, typeDirectory: NSSearchPathDirectory.DocumentDirectory)
+                    }
+                    realm.delete(self.classStudent)
+                })
+            } catch { }
+            navigationController?.popViewControllerAnimated(true)
     }
     
     //MARK: Private
@@ -55,7 +62,7 @@ class EditStudentViewController: UIViewController {
     
     //MARK: Set Up UI 
     private func setUpUI() {
-      setTextLabel()
+      setTextField()
     }
     
     //MARK: Set Up Data
@@ -63,10 +70,10 @@ class EditStudentViewController: UIViewController {
         
     }
     
-    private func setTextLabel() {
-        schoolNameLabel.text = NSString(format: "\(Strings.schoolName)%@", classStudent.schoolName) as String
-        classNameLabel.text = NSString(format: "\(Strings.className)%@", classStudent.classRoom) as String
-        noNumberLabel.text = NSString(format: "\(Strings.noNumber)%@", classStudent.numbers) as String
+    private func setTextField() {
+        tfSchoolName.text = classStudent.schoolName
+        tfClassName.text = classStudent.classRoom
+        tfNoNumber.text = classStudent.numbers
         if !classStudent.avatarImageView.isEmpty {
             imageView.image = FileManager.fileManager.loadFile(classStudent.avatarImageView, typeDirectory: .DocumentDirectory)
         }

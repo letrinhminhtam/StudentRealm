@@ -14,9 +14,9 @@ class StudentViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var nameLabel: UILabel!
     
-    var student: Results<Student>?
+    var students: Results<Student>!
+    var showStudent = Student()
     var classs = Class()
-    var studi = Student()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,8 @@ class StudentViewController: UIViewController {
     
     @IBAction func addStudentButton(sender: AnyObject) {
         let addStudentVC = AddStudentViewController()
+        addStudentVC.classs = classs
+        print("adasdads: \(addStudentVC.classs.classRoom)")
         navigationController?.pushViewController(addStudentVC, animated: true)
     }
     
@@ -52,21 +54,16 @@ class StudentViewController: UIViewController {
     
     //MARK: Set Up Data
     private func setUpData() {
-        studentList()
-        nameLabel.text = classs.schoolName
+        nameLabel.text = showStudent.classRoom
+        students = uiRealm.objects(Student).filter("classRoom = %@", classs.classRoom)
+        print("Ra ko: \(students)")
     }
     
     //MARK: Set Up UI
     private func setUpUI() {
     
     }
-    
-    private func studentList() {
-        do {
-            let realm = try Realm()
-            student = realm.objects(Student)
-        } catch {}
-    }
+
 }
 
 extension StudentViewController: UITableViewDelegate, UITableViewDataSource {
@@ -78,12 +75,13 @@ extension StudentViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return student!.count
+        return students!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let studentCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! StudentListTableViewCell
-        studentCell.congiureStudentListCell(student![indexPath.row])
+        studentCell.congiureStudentListCell(students![indexPath.row])
+        studentCell.classLabel.text = showStudent.classRoom
         return studentCell
     }
 }
