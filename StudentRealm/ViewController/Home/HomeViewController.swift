@@ -53,7 +53,6 @@ class HomeViewController: UIViewController {
             let realm = try Realm()
             results = realm.objects(Class)
         } catch {}
-
     }
     
     //MARK: IBAction Button

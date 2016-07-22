@@ -14,6 +14,7 @@ class StudentViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
     var student: Results<Student>?
+    var classs = Class()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,11 @@ class StudentViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        tableView.reloadData()
     }
     
     @IBAction func backButton(sender: AnyObject) {
