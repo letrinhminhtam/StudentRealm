@@ -15,4 +15,5 @@ class Class: Object {
     dynamic var numbers = ""
     dynamic var classRoom = ""
     dynamic var avatarImageView = ""
+    var student: List<Student>?
 }		
