@@ -39,13 +39,21 @@ class EditStudentViewController: UIViewController {
     @IBAction func studentButton(sender: AnyObject) {
         let studentVC = StudentViewController()
         studentVC.classs.schoolName = classStudent.schoolName
-        
         print("Name: \(students.studentName)")
         navigationController?.pushViewController(studentVC, animated:true)
     }
     
     @IBAction func deleteStudentButton(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+        do {
+            let realm = try Realm()
+            try realm.write ({ () -> Void in
+                if !self.classStudent.avatarImageView.isEmpty {
+                    FileManager.fileManager.deleteFile(self.classStudent.avatarImageView, typeDirectory: NSSearchPathDirectory.DocumentDirectory)
+                    }
+                    realm.delete(self.classStudent)
+                })
+            } catch { }
+            navigationController?.popViewControllerAnimated(true)
     }
     
     //MARK: Private
