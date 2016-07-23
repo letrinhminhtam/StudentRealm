@@ -18,7 +18,7 @@ class EditStudentViewController: UIViewController {
 
     var classStudent = Class()
     var students = Student()
-    let realm = try! Realm()
+    var results: Results<Class>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +38,7 @@ class EditStudentViewController: UIViewController {
     
     @IBAction func studentButton(sender: AnyObject) {
         let studentVC = StudentViewController()
-        studentVC.classs.schoolName = classStudent.schoolName
-        classStudent.student?.append(students)
-        print("Name: \(classStudent.student?.append(students))")
+        studentVC.classs = classStudent
         navigationController?.pushViewController(studentVC, animated:true)
     }
     
