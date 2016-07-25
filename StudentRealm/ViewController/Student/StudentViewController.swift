@@ -41,7 +41,6 @@ class StudentViewController: UIViewController {
     @IBAction func addStudentButton(sender: AnyObject) {
         let addStudentVC = AddStudentViewController()
         addStudentVC.classs = classs
-        print("adasdads: \(addStudentVC.classs.classRoom)")
         navigationController?.pushViewController(addStudentVC, animated: true)
     }
     
@@ -54,9 +53,9 @@ class StudentViewController: UIViewController {
     
     //MARK: Set Up Data
     private func setUpData() {
-        nameLabel.text = showStudent.classRoom
+        nameLabel.text = classs.classRoom
+        print(nameLabel.text)
         students = uiRealm.objects(Student).filter("classRoom = %@", classs.classRoom)
-        print("Ra ko: \(students)")
     }
     
     //MARK: Set Up UI
@@ -80,8 +79,8 @@ extension StudentViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let studentCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! StudentListTableViewCell
-        studentCell.congiureStudentListCell(students![indexPath.row])
-        studentCell.classLabel.text = showStudent.classRoom
+        studentCell.configureStudentListCell(students![indexPath.row])
+        studentCell.configureSetText(classs)
         return studentCell
     }
 }
