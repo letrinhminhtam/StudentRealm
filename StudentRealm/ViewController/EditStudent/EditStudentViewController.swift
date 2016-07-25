@@ -43,16 +43,7 @@ class EditStudentViewController: UIViewController {
     }
     
     @IBAction func deleteStudentButton(sender: AnyObject) {
-        do {
-            let realm = try Realm()
-            try realm.write ({ () -> Void in
-                if !self.classStudent.avatarImageView.isEmpty {
-                    FileManager.fileManager.deleteFile(self.classStudent.avatarImageView, typeDirectory: NSSearchPathDirectory.DocumentDirectory)
-                    }
-                    realm.delete(self.classStudent)
-                })
-            } catch { }
-            navigationController?.popViewControllerAnimated(true)
+        self.deleteClass()
     }
     
     //MARK: Private
@@ -77,5 +68,24 @@ class EditStudentViewController: UIViewController {
         if !classStudent.avatarImageView.isEmpty {
             imageView.image = FileManager.fileManager.loadFile(classStudent.avatarImageView, typeDirectory: .DocumentDirectory)
         }
+    }
+    
+    //MARK: AlertViewController
+    private func deleteClass() {
+        let deleteClass = UIAlertController(title: "Warning", message: Strings.delete, preferredStyle: .Alert)
+        deleteClass.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+            do {
+                let realm = try Realm()
+                try realm.write ({ () -> Void in
+                    if !self.classStudent.avatarImageView.isEmpty {
+                        FileManager.fileManager.deleteFile(self.classStudent.avatarImageView, typeDirectory: NSSearchPathDirectory.DocumentDirectory)
+                    }
+                    realm.delete(self.classStudent)
+                })
+            } catch { }
+            self.navigationController?.popViewControllerAnimated(true)
+        }))
+        deleteClass.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(deleteClass, animated: true, completion: nil)
     }
 }

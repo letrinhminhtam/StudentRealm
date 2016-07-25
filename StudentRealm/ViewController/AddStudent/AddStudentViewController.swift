@@ -36,7 +36,13 @@ class AddStudentViewController: UIViewController {
     }
     
     @IBAction func doneButton(sender: AnyObject) {
-        addStudent()
+        if tfLastName.text?.isEmpty == false
+            && tfAge.text?.isEmpty == false
+            && tfSex.text?.isEmpty == false {
+            addStudent()
+        } else {
+            checkAddStudent()
+        }
     }
     
     //MARK: configure
@@ -60,13 +66,20 @@ class AddStudentViewController: UIViewController {
         students.age = tfAge.text!
         students.sex = tfSex.text!
         students.classRoom = classs.classRoom
-        print("Student: \(students.studentName)")
         do {
             let realm = try Realm()
             try realm.write {
                 realm.add(students)
             }
         } catch {}
-        navigationController?.popViewControllerAnimated(true)
+            navigationController?.popViewControllerAnimated(true)
+    }
+    
+    //MARK: AlertViewController
+    private func checkAddStudent() {
+        let checkAddStudents = UIAlertController(title: "Warning", message: Strings.warning, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        checkAddStudents.addAction(action)
+        presentViewController(checkAddStudents, animated: true, completion: nil)
     }
 }

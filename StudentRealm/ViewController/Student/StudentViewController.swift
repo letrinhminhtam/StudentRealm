@@ -62,7 +62,6 @@ class StudentViewController: UIViewController {
     private func setUpUI() {
     
     }
-
 }
 
 extension StudentViewController: UITableViewDelegate, UITableViewDataSource {

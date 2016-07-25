@@ -28,11 +28,10 @@ class StudentListTableViewCell: UITableViewCell {
         lastNameLabel.text = NSString(format: "\(Strings.lastName)%@", student.studentName) as String
         ageLabel.text = NSString(format: "\(Strings.age)%@", student.age) as String
         sexLabel.text = NSString(format: "\(Strings.sex)%@", student.sex) as String
-       // classLabel.text = NSString(format: "\(Strings.classRoom)%@", student.classRoom) as String
     }
     
     func configureSetText(classs: Class) {
-        classLabel.text = classs.classRoom
+        classLabel.text = NSString(format: "\(Strings.classRoom)%@", classs.classRoom) as String
     }
 }
 	

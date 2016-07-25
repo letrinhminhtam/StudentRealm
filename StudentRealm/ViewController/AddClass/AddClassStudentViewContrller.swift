@@ -57,7 +57,13 @@ class AddClassStudentViewContrller: UIViewController {
     }
     
     @IBAction func doneButton(sender: AnyObject) {
-        addClassStudent()
+        if tfSchoolName.text?.isEmpty == false
+            && tfNoNumber.text?.isEmpty == false
+            && tfClassName.text?.isEmpty == false {
+            addClassStudent()
+        } else {
+            checkAddClass()
+        }
     }
     
     private func addClassStudent() {
@@ -67,7 +73,6 @@ class AddClassStudentViewContrller: UIViewController {
         if let imageView = avatarImageView.image {
             classStudent.avatarImageView = saveImageView(imageView)
         }
-        print("image add: \(classStudent.avatarImageView)")
         do {
             let realm = try Realm()
             try realm.write {
@@ -86,6 +91,13 @@ class AddClassStudentViewContrller: UIViewController {
         FileManager.fileManager.saveFile(imageView, name: filename, typeDirectory: .DocumentDirectory)
         print("Link: \(filename)")
         return filename
+    }
+    
+    //MARK: AlertViewController
+    private func checkAddClass() {
+        let checkAddClass = UIAlertController(title: "Warning", message: Strings.warning, preferredStyle: .Alert)
+        checkAddClass.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        presentViewController(checkAddClass, animated: true, completion: nil)
     }
 }
 

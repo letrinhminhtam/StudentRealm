@@ -17,4 +17,6 @@ class Strings {
     static let age = "Tuổi: "
     static let sex = "Giới tính: "
     static let classRoom = "Lớp học: "
+    static let warning = "Không được để trống."
+    static let delete = "Bạn thật sự muốn xoá class."
 }
